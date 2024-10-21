@@ -128,6 +128,13 @@ namespace ENDFtk {
     }
 
     /**
+     *  @brief Return a pointer to the list of values for zero-copy transfer to python
+     */
+    auto listPtr() const {
+      return this->data.data();
+    }
+
+    /**
      *  @brief Return the list of values
      */
     auto B() const { return this->list(); }

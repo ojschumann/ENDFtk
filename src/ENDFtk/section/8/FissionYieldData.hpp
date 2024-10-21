@@ -118,6 +118,13 @@ namespace section{
     }
 
     /**
+     *  @brief Return a pointer to the list of values for zero-copy transfer to python
+     */
+    auto listPtr() const {
+      return ListRecord::listPtr(); // ListRecord::listPtr() is protected
+    }
+
+    /**
      *  @brief Return the fission yield values and uncertainties
      */
     auto fissionYields() const { return this->Y(); }
